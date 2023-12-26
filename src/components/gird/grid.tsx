@@ -1,5 +1,5 @@
 import { SimpleGrid, Skeleton, Container, Stack, useMantineTheme, px } from '@mantine/core';
-
+import './gridcust.css'
 const getChild = (height: number) => <Skeleton height={height} radius="md" animate={false} />;
 const BASE_HEIGHT = 560;
 const getSubHeight = (children: number, spacing: number) =>
@@ -8,7 +8,7 @@ const getSubHeight = (children: number, spacing: number) =>
 export function Subgrid() {
   const theme = useMantineTheme();
   return (
-    <Container my="md">
+    <Container my="grid-indexing">
       <SimpleGrid cols={{ base: 1, xs: 4 }}>
         {getChild(BASE_HEIGHT)}
         <Stack>
